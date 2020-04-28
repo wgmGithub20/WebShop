@@ -1,0 +1,92 @@
+{
+    "message":[
+        {
+            "id":1,
+            "title":"Apple iPhone 11爆品限时特惠",
+            "name":"Apple iPhone 11",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/01.jpg",
+            "price":5999,
+            "sell":"5002",
+            "tag":"限时",
+            "addr":"深圳"
+        },
+        {
+            "id":2,
+            "name":"华为 HUAWEI P30",
+            "title":"华为 HUAWEI P30 超感光徕卡三摄麒麟980AI智能芯片",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/02.jpg",
+            "price":3288,
+            "sell":"7800",
+            "tag":"爆款",
+            "addr":"广州"
+        },
+        {
+            "id":3,
+            "name":"Redmi Note8Pro",
+            "title":"Redmi Note8Pro 6400万全场景四摄 液冷游戏芯",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/03.png",
+            "price":1299,
+            "sell":"8883",
+            "tag":"热卖",
+            "addr":"北京"
+        },
+        {
+            "id":4,
+            "name":"HUAWEI Mate 30 Pro",
+            "title":"HUAWEI Mate 30 Pro 5G 麒麟990 OLED环幕屏",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/04.jpg",
+            "price":6399,
+            "sell":"5600",
+            "tag":"热卖",
+            "addr":"上海"
+        },
+        {
+            "id":5,
+            "title":"Apple iPhone 11爆品限时特惠",
+            "name":"Apple iPhone 11",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/01.jpg",
+            "price":5999,
+            "sell":"5002",
+            "tag":"限时",
+            "addr":"深圳"
+        },
+        {
+            "id":6,
+            "name":"华为 HUAWEI P30",
+            "title":"华为 HUAWEI P30 超感光徕卡三摄麒麟980AI智能芯片",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/02.jpg",
+            "price":3288,
+            "sell":"7800",
+            "tag":"爆款",
+            "addr":"广州"
+        },
+        {
+            "id":7,
+            "name":"Redmi Note8Pro",
+            "title":"Redmi Note8Pro 6400万全场景四摄 液冷游戏芯",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/03.png",
+            "price":1299,
+            "sell":"8883",
+            "tag":"热卖",
+            "addr":"北京"
+        },
+        {
+            "id":8,
+            "name":"HUAWEI Mate 30 Pro",
+            "title":"HUAWEI Mate 30 Pro 5G 麒麟990 OLED环幕屏",
+            "content":"",
+            "image":"http://localhost:3000/images/goodsList/04.jpg",
+            "price":6399,
+            "sell":"5600",
+            "tag":"热卖",
+            "addr":"上海"
+        }
+    ]
+}
