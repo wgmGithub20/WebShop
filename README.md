@@ -43,7 +43,7 @@
 
 #### 3.1WebShop-client
 
-```javascript
+```
 |--dist：npm run build 命令打包的项目文件
 |--node_moudles：存放项目的各种依赖
 |--public：存放静态资源
