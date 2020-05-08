@@ -2,46 +2,16 @@
 
 ### 1.项目描述
 
-- 此项目是一个前后端分离的单页Web应用(SPA)
-- 使用了Vue全家桶+ES6+Wabpack等前端技术，搭配nodejs+express框架+mongodb进行后端开发
+- 此项目是一个前后端分离的单页Web应用(SPA)，是一个打通前后端流程的一个项目
+- 技术栈：Vue.js+ES6+Vant+Node.js+ Express+ MongoDB
 - 包括热点资讯，买家秀，商品，购物车，用户等多个子模块
 - 采用模块化、组件化、工程化的模式开发
 
-### 2.从项目中学到的东西
+### 2.项目结构说明
 
-#### 2.1项目开发流程及开发方法
+WebShop-client是前台项目，WebShop-server是后台项目
 
-- 熟悉一个项目的开发过程
-- 掌握使用vue-cli创建工程化项目
-- 使用Mockjs拦截Ajax，实现前后端分离开发
-- 使用Nodejs开发后端，实现全栈开发
-- 学会组件化、模块化、工程化的开发模式
-- 掌握一些项目优化技巧
-- 掌握使用Git基本命令，使用Github进行远程托管代码
-- 掌握一些ES6新特性，例如模板字符串、解析结构、模块化、展开运算符
-
-#### 2.2Vue插件及第三方库
-
-- 学会使用Vuex管理共享状态
-- 学会使用 vue-router 开发单页应用
-- 学会使用Vue-devtools调试程序
-- 学会使用Vue-axios与后端进行数据交互
-- 学会使用 vue-lazyload 实现图片惰加载
-- 学会使用Vant、mint-ui 组件库构建界面
-- 学会使用blueimp-md5插件进行加密
-
-#### 2.3样式/布局/效果相关
-
-- 掌握CSS 预处理语言less、stylus
-- 掌握 flex 弹性布局
-- 制作并使用字体图标
-- 解决移动端300毫秒点击延迟
-- px2vw 单位转化解决屏幕适配
--  使用data-fns/moment进行日期格式化
-
-### 3.项目结构说明
-
-#### 3.1WebShop-client
+#### 2.1WebShop-client
 
 ```
 |--dist：npm run build 命令打包的项目文件
@@ -77,15 +47,15 @@
 |--webpack.config.js：webpack配置文件，默认是没有的，需要自己创建
 ```
 
-### 4.运行项目
+### 3.运行项目
 
-#### 4.1准备工作
+#### 3.1准备工作
 
 - 确保安装了node环境，查看是否已经安装: node -v
 
 - 确保安装了mongodb, 并启动了对应的服务
 
-#### 4.2启动后台应用
+#### 3.2启动后台应用
 
 - WebShop-server文件夹下cmd命令：
 
@@ -93,22 +63,24 @@
 
 - npm start
 
-#### 4.3启动前台应用
+#### 3.3启动前台应用
 
 - WebShop-client文件夹下cmd命令：
 - npm install
 - npm run serve或npm run build
 
-####  4.4 补充
+####  3.4 补充
 
 - 开发环境打包 npm run serve
 - 生产环境打包 npm run build
 - ESLint语法检查和修正 npm run lint
 - 生成打包报告 npm run build --report
 
-### 5.项目优化
+### 4.项目优化
 
-####  5.1keep-alive 缓存组件对象
+对项目做了一些优化 ，总结以下几点
+
+####  4.1keep-alive 缓存组件对象
 
 keep-alive 是 Vue 的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染 DOM。
 
@@ -119,7 +91,7 @@ keep-alive 是 Vue 的内置组件，能在组件切换过程中将状态保留�
 </keep-alive>
 ```
 
-#### 5.2路由组件懒加载
+#### 4.2路由组件懒加载
 
 ```javascript
 {
@@ -128,7 +100,7 @@ keep-alive 是 Vue 的内置组件，能在组件切换过程中将状态保留�
 }
 ```
 
-#### 5.3图片懒加载
+#### 4.3图片懒加载
 
 - 安装vue-lazyload插件
 
@@ -156,7 +128,7 @@ npm install vue-lazyload --save-dev
 
 - vue文件中需要懒加载的背景图片，v-lazy:background-image="imgUrl"
 
-#### 5.4日期格式化 使用data-fns代替moment
+#### 4.4日期格式化 使用data-fns代替moment
 
 - 安装data-fns
 
@@ -179,7 +151,7 @@ import format from 'date-fns/format'
 <div  class="time">{{rating.rateTime|date-format}}</div>
 ```
 
-#### 5.5解决移动端300毫秒点击延迟
+#### 4.5解决移动端300毫秒点击延迟
 
 - 第一种：禁用缩放并设置视口宽度为物理宽度 在html头部设置meta标签
 
@@ -216,7 +188,7 @@ import format from 'date-fns/format'
         }
     ```
 
-#### 5.6屏幕适配px2vw 单位转化(使用postcss-px-to-viewport插件)
+#### 4.6屏幕适配px2vw 单位转化(使用postcss-px-to-viewport插件)
 
 - 安装
 
@@ -244,7 +216,7 @@ module.exports = {
 }
 ```
 
-#### 5.7生产环境移除console(使用babel-plugin-transform-remove-console插件)
+#### 4.7生产环境移除console(使用babel-plugin-transform-remove-console插件)
 
 - 安装
 
@@ -268,13 +240,13 @@ module.exports = {
 }
 ```
 
-#### 5.8对密码进行md5加密 使用blueimp-md5加密
+#### 4.8对密码进行md5加密 使用blueimp-md5加密
 
-#### 5.9优化登录创建防攻击验证码 node使用svg-captcha
+#### 4.9优化登录创建防攻击验证码 node使用svg-captcha
 
-### 6.其他
+### 5.其他
 
-#### 6.1弹性布局的几个属性 align-items align-content justify-content align-self
+#### 5.1弹性布局的几个属性 align-items align-content justify-content align-self
 
  需要配合 display: flex;使用
 
@@ -289,7 +261,7 @@ module.exports = {
   - 4.sapce-between 两端对齐，子元素之间的间距相等
   - 5.space-around 每个子元素两侧的间距相等。
 
-#### 6.2关于session
+#### 5.2关于session
 
 1. 为什么需要用 session？
 
@@ -301,17 +273,17 @@ module.exports = {
    - session 会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能 考虑到减轻服务器性能方面，应当使用 COOKIE。
    - 单个 cookie 保存的数据不能超过 4K，很多浏览器都限制一个站点最多保存 20 个 cookie。
 
-#### 6.3前端要携带 cookie 到服务端，需要三个条件
+#### 5.3前端要携带 cookie 到服务端，需要三个条件
 
 1. Access-Control-Allow-Origin 不能为\*，应为具体域名
 2. 服务端 Access-Control-Allow-Credentials 应为 true
 3. 客户端 XMLHttpRequest 的 withCredentials=true
 
-#### 6.4关于 cookie 丢失 session 取值为 undefined 的问题
+#### 5.4关于 cookie 丢失 session 取值为 undefined 的问题
 
 虽然 axios 配置了 axios.defaults.withCredentials = true，由于我使用了 Mockjs，Mockjs 会拦截所有 ajax 请求，覆盖 axios 配置，对于跨域请求，Mockjs 是不携带 cookie 的，如果需要携带 cookie 配置 Mock.XHR.prototype.withCredentials = true 即可
 
-#### 6.5使用 mockjs 模拟后端接口数据
+#### 5.5使用 mockjs 模拟后端接口数据
 
 ```javascript
 npm i mockjs
