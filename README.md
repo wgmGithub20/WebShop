@@ -44,7 +44,7 @@ WebShop-client是前台项目，WebShop-server是后台项目
 |--package.json：应用包配置文件
 |--postcss.config.js：postcss配置文件
 |--README.md：应用描述说明的 readme 文件
-|--webpack.config.js：webpack配置文件，默认是没有的，需要自己创建
+|--vue.config.js：webpack配置文件，默认是没有的，需要自己创建
 ```
 
 ### 3.运行项目
